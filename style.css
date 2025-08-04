@@ -1,0 +1,294 @@
+/* Pre Code Settings */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --main-background:#202124;
+    --card-background:#4e5058;
+    --hover-background:#53595e;
+    --primary-text:#E8EAED;
+    --secondary-text:#9fa6ac;
+    --blue-accent:#8AB4F8;
+    --green-url:#81C995;
+    --red-icon:#F28B82;
+    --doodle-button-color:#34363ac7;
+    --subfooter-bg-color: rgba(15, 15, 15, 0.53);
+    --subfooter-bottom-border:rgba(255, 255, 255, 0.096);
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: var(--main-background);
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+ul{
+    list-style: none;
+}
+
+/* Utlity Classes */
+
+/* Navigation */
+.navigation{
+    width: 100vw;
+    height: 7vh;
+    justify-content: right;
+    align-items: center;
+    gap: 1.6vw;
+    padding-inline: 20px;
+    padding-block: 30px;
+}
+
+.nav-image{
+    width: 2.2vw;
+}
+
+.account-logo{
+    border-radius: 2.2vw;
+}
+
+.nav-image:hover{
+    cursor: pointer;
+}
+
+.navigation a:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+/* Google Image Section */
+.google-image{
+    width: 24%;
+}
+.big-image{
+    justify-content: center;
+}
+
+/* Input Section */
+.input{
+    justify-content: center;
+}
+
+.bar{
+    width: 45vw;
+    height: 3.9vw;
+    background-color: var(--card-background);
+    border-radius: 25px;
+    border: 5px solid var(--card-background);
+    color: white;
+    font-size: 1.25rem;
+    padding-left: 4vw;
+    padding-right: 6.5vw;
+}
+
+.bar:hover{
+    background-color: var(--hover-background);
+}
+
+/* Doodle Section */
+.doodle{
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.doodle button{
+    padding-inline: 16px;
+    padding-block: 10px;
+    margin-top: 2.2vw;
+    background-color: var(--doodle-button-color);
+    color: white;
+    border: none;
+    width: 110%;
+    height: 3vw;
+    font-size: 0.9rem;
+    border-radius: 10px;
+}
+
+.doodle button:hover{
+    border: 0.15px solid var(--secondary-text);
+}
+
+/* Languages Section */
+.language{
+    margin-top: 4vw;
+    gap: 3px;
+    align-items: center;
+}
+
+.language p{
+    color: var(--secondary-text);
+}
+
+.language a{
+    color: var(--blue-accent);
+}
+
+.language a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--blue-accent);
+}
+
+/* Footer Section */
+.footer{
+    position: fixed;
+    width: 100%;
+    color: white;
+    background-color: var(--subfooter-bg-color);
+    /* margin-top: 22.5vh; */
+    bottom: 6vh;
+    height: 8vh;
+    justify-content: flex-start;
+    padding-inline: 40px;
+    padding-block: 5px;
+    align-items: center;
+    border-bottom: 1px solid var(--subfooter-bottom-border);
+}
+
+/* Subfooter Section */
+.subfooter{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    padding-inline: 40px;
+    color: white;
+    background-color: var(--subfooter-bg-color);
+    margin-top: 0.8vhvh;
+    height: 6vh;
+    align-items: center;
+}
+
+.left-list{
+    gap:2vw ;
+}
+
+.left-list >li > a:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+.right-list >li > a:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.right-list{
+    gap: 2vw;
+}
+
+/* Icons in Search Bar */
+
+/* .icons{
+    position: absolute;
+    width: 3vw;
+    border-radius: 3vw;
+}
+
+.icon1{
+    left: 28vw;
+    top: 31vh;
+}
+
+.icon2{
+    left: 65.5vw;
+    top: 31vh;
+}
+
+.icon3{
+    top: 31.5vh;
+    left: 68.5vw;
+} */
+
+
+/* Normal Phones */
+/* Media Queries */
+@media (max-width:600px){
+    /* Navigation */
+    .navigation{
+        font-size: 0.9rem;
+        gap: 10px;
+    }
+
+    .nav-image{
+        width: 6vw;
+    }
+
+    /* Google Image */
+    .big-image{
+        margin-top: 4vh;
+    }
+
+    .google-image{
+        width: 48vw;
+    }
+
+    /* Input Section */
+    .bar{
+        width: 90%;
+        height: 43px;
+    }
+
+    /* Doodle Section */
+    .doodle{
+        margin-top: 1vh;
+        gap: 20px;
+    }
+    .doodle button{
+        height:6vh !important;
+    }
+
+    /* Footer */
+    .footer{
+        bottom: 10.2vh;
+    }
+
+    .subfooter{
+        bottom: 0;
+        height: 10vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        bottom:1px;
+    }
+
+}
+
+
+
+/* Medium (Tablets) */
+@media (min-width:768px) and (max-width:1024px){
+    .doodle button{
+        height: 5vh;
+    }
+}
+
+
+/* Extra Small Phones */
+@media (max-width:480px){
+    .doodle button{
+        height: 10vh;
+    }
+}
